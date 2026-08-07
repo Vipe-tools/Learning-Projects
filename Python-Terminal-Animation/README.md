@@ -1,5 +1,6 @@
 # Python Terminal Animation
-
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white)](https://www.microsoft.com/windows/)
 
 A small Python learning project that demonstrates a simple interactive terminal interface.
 
