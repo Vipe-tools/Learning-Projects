@@ -1,0 +1,529 @@
+/*
+    ============================================================
+    CSS UBUNG
+    ============================================================
+
+    CSS bestimmt das AUSSEHEN einer HTML-Seite.
+
+    HTML = Inhalt und Aufbau
+    CSS  = Farben, Grossen, Abstande, Animationen usw.
+
+    Diese Datei gehort zu "index.html".
+*/
+
+
+/* ============================================================
+   GRUNDEINSTELLUNGEN
+   ============================================================ */
+
+
+/*
+    "body" ist der komplette sichtbare Bereich der Webseite.
+
+    Hier legen wir den allgemeinen Hintergrund,
+    die Schrift und den Abstand fest.
+*/
+body {
+
+    /* Hintergrundfarbe der gesamten Seite */
+    background-color: #eeeeee;
+
+    /* Schriftart */
+    font-family: Arial, sans-serif;
+
+    /* Abstand zwischen Inhalt und Bildschirmrand */
+    margin: 0;
+
+    /* Abstand innerhalb des Body */
+    padding: 20px;
+
+    /* Allgemeine Textfarbe */
+    color: #222222;
+}
+
+
+/*
+    ============================================================
+    UBERSCHRIFT
+    ============================================================
+*/
+
+
+h1 {
+
+    /* Farbe der grossen Uberschrift */
+    color: #4b20d9;
+
+    /* Textgrosse */
+    font-size: 40px;
+
+    /* Text in der Mitte */
+    text-align: center;
+}
+
+
+/*
+    ============================================================
+    NORMALE BEREICHE
+    ============================================================
+*/
+
+
+/*
+    "section" bezeichnet die einzelnen Inhaltsbereiche.
+*/
+section {
+
+    /* Abstand ausserhalb des Bereichs */
+    margin-bottom: 30px;
+
+    /* Abstand innerhalb des Bereichs */
+    padding: 20px;
+
+    /* Weisser Hintergrund */
+    background-color: white;
+
+    /* Runde Ecken */
+    border-radius: 15px;
+
+    /* Schatten um den Bereich */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/*
+    ============================================================
+    FARBIGER TEXT
+    ============================================================
+*/
+
+
+/*
+    Der Punkt vor "farbiger-text" bedeutet:
+
+    Wir sprechen eine HTML-Klasse an.
+
+    In HTML steht zum Beispiel:
+
+    <p class="farbiger-text">
+*/
+.farbiger-text {
+
+    /* Textfarbe */
+    color: #e91e63;
+
+    /* Text etwas grosser */
+    font-size: 20px;
+
+    /* Text fett */
+    font-weight: bold;
+}
+
+
+/*
+    ============================================================
+    FARBIGER BEREICH
+    ============================================================
+*/
+
+
+.farbiger-bereich {
+
+    /*
+        Ein Farbverlauf.
+
+        Die Farbe beginnt links mit Blau
+        und geht rechts zu Violett uber.
+    */
+    background: linear-gradient(
+        90deg,
+        #4facfe,
+        #8e44ad
+    );
+
+    /* Textfarbe */
+    color: white;
+}
+
+
+/*
+    ============================================================
+    LINKS
+    ============================================================
+*/
+
+
+/*
+    Alle normalen Links.
+*/
+a {
+
+    /* Linkfarbe */
+    color: #0066cc;
+
+    /* Unterstreichung anzeigen */
+    text-decoration: underline;
+}
+
+
+/*
+    Wenn die Maus uber einen Link fahrt.
+*/
+a:hover {
+
+    /* Link wird rot | aber in neon*/
+    color: red;
+}
+
+
+/*
+    ============================================================
+    LINK ALS BUTTON
+    ============================================================
+*/
+
+
+.link-button {
+
+    /* Link soll wie ein Button aussehen */
+    display: inline-block;
+
+    /* Hintergrundfarbe */
+    background-color: #3333cc;
+
+    /* Textfarbe */
+    color: white;
+
+    /* Abstand innerhalb des Buttons */
+    padding: 12px 20px;
+
+    /* Runde Ecken */
+    border-radius: 8px;
+
+    /* Unterstreichung entfernen */
+    text-decoration: none;
+
+    /*
+        Wenn sich etwas verandert,
+        geschieht die Veranderung langsam.
+
+        0.3 Sekunden = Dauer der Veranderung.
+    */
+    transition: 0.3s;
+}
+
+
+/*
+    Wenn die Maus uber dem Link-Button ist.
+*/
+.link-button:hover {
+
+    /* Hintergrundfarbe andern */
+    background-color: #ff3399;
+
+    /*
+        Der Button wird etwas grosser.
+    */
+    transform: scale(1.1);
+}
+
+
+/*
+    ============================================================
+    BUTTON 1
+    ============================================================
+*/
+
+
+.button-1 {
+
+    /* Hintergrund */
+    background-color: #3498db;
+
+    /* Textfarbe */
+    color: white;
+
+    /* Innenabstand */
+    padding: 12px 25px;
+
+    /* Keine normale Rahmenlinie */
+    border: none;
+
+    /* Runde Ecken */
+    border-radius: 8px;
+
+    /* Schriftgrosse */
+    font-size: 16px;
+
+    /*
+        Der Mauszeiger wird zur Hand.
+    */
+    cursor: pointer;
+
+    /* Veranderung langsam machen */
+    transition: 0.3s;
+}
+
+
+/*
+    Hover bedeutet:
+
+    Die Maus befindet sich uber dem Element.
+*/
+.button-1:hover {
+
+    /* Neue Hintergrundfarbe */
+    background-color: #2ecc71;
+
+    /* Button wird etwas grosser */
+    transform: scale(1.1);
+}
+
+
+/*
+    ============================================================
+    BUTTON 2
+    ============================================================
+*/
+
+
+.button-2 {
+
+    background-color: #9b59b6;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    /*
+        Schatten.
+
+        Die Werte bedeuten ungefahr:
+
+        0  = kein Versatz nach links/rechts
+        0  = kein Versatz nach oben/unten
+        10px = Grosse des Schattens
+        rgba = Farbe mit Transparenz
+    */
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.7);
+
+    transition: 0.3s;
+}
+
+
+/*
+    Hover fur Button 2.
+*/
+.button-2:hover {
+
+    /*
+        Der Schatten wird deutlich grosser.
+
+        Dadurch entsteht ein Leuchteffekt.
+    */
+    box-shadow:
+        0 0 10px #9b59b6,
+        0 0 25px #9b59b6,
+        0 0 40px #9b59b6;
+
+    /* Button etwas vergrossern */
+    transform: scale(1.1);
+}
+
+
+/*
+    ============================================================
+    BUTTON 3
+    ============================================================
+*/
+
+
+.button-3 {
+
+    background-color: #e67e22;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/*
+    Hover fur Button 3.
+*/
+.button-3:hover {
+
+    /*
+        translateY verschiebt das Element
+        nach oben oder unten.
+
+        -10px = 10 Pixel nach oben.
+    */
+    transform: translateY(-10px);
+
+    /* Schatten */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/*
+    ============================================================
+    HOVER BOX
+    ============================================================
+*/
+
+
+.hover-box {
+
+    /*
+        Grosse des Bereichs.
+    */
+    padding: 50px;
+
+    /* Text in die Mitte */
+    text-align: center;
+
+    /* Hintergrund */
+    background-color: #222222;
+
+    /* Textfarbe */
+    color: white;
+
+    /* Runde Ecken */
+    border-radius: 15px;
+
+    /*
+        Wichtig:
+
+        Alle Veranderungen des Elements werden
+        langsam und weich durchgefuhrt.
+    */
+    transition: 0.5s;
+}
+
+
+/*
+    Wenn die Maus uber der Box ist.
+*/
+.hover-box:hover {
+
+    /* Neue Hintergrundfarbe */
+    background-color: #ff4081;
+
+    /* Box wird grosser */
+    transform: scale(1.05);
+
+    /* Grosser Schatten */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/*
+    ============================================================
+    UPLOAD / DATEI-BEREICH
+    ============================================================
+*/
+
+
+.upload-bereich {
+
+    /* Farbiger Hintergrund */
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #dfe9ff
+    );
+}
+
+
+/*
+    Das Datei-Auswahlfeld.
+
+    Dieses Element kommt aus HTML:
+
+    <input type="file">
+*/
+input[type="file"] {
+
+    /* Hintergrund */
+    background-color: white;
+
+    /* Abstand */
+    padding: 10px;
+
+    /* Rahmen */
+    border: 2px solid #5555cc;
+
+    /* Runde Ecken */
+    border-radius: 8px;
+
+    /* Mauszeiger */
+    cursor: pointer;
+}
+
+
+/*
+    ============================================================
+    FOOTER
+    ============================================================
+*/
+
+
+footer {
+
+    /* Text in die Mitte */
+    text-align: center;
+
+    /* Abstand oben */
+    margin-top: 30px;
+
+    /* Textfarbe */
+    color: #666666;
+}
+
+
+/*
+    ============================================================
+    ENDE
+    ============================================================
+
+    Wenn du diese Datei verstanden hast, kannst du anfangen,
+    einzelne Werte selbst zu verandern.
+
+    Zum Beispiel:
+
+    background-color: red;
+
+    oder:
+
+    font-size: 50px;
+
+    oder:
+
+    border-radius: 50px;
+
+    oder:
+
+    transform: scale(1.2);
+
+    So lernst du am besten, was die einzelnen CSS-Eigenschaften
+    tatsachlich verandern.
+*/
