@@ -1,5 +1,5 @@
 # Whitespace Hello World
-[![Whitespace](https://img.shields.io/badge/Whitespace-E34C26)](https://esolangs.org/wiki/Whitespace)
+[![Whitespace](https://img.shields.io/badge/Whitespace-FF0000)](https://esolangs.org/wiki/Whitespace)
 
 A small project written in **Whitespace**, an esoteric programming language where the actual source code consists only of:
 
