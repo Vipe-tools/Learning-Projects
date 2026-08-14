@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!--
+        Hier beginnt der Kopfbereich der HTML-Datei.
+
+        Im Kopf stehen Informationen uber die Seite,
+        die normalerweise nicht direkt auf der Seite angezeigt werden.
+    -->
+
+    <!--
+        Zeichencodierung:
+        UTF-8 sorgt dafur, dass deutsche Zeichen wie ä, ö, ü und ß
+        richtig dargestellt werden.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        Sorgt dafur, dass die Seite auf verschiedenen Bildschirmgrossen
+        richtig dargestellt wird.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Das ist der Titel der Seite.
+        Er erscheint zum Beispiel oben im Browser-Tab.
+    -->
+    <title>HTML & CSS Übung</title>
+
+    <!--
+        Hier wird die CSS-Datei eingebunden.
+
+        "style.css" ist die zweite Datei unserer Ubung.
+        Dort schreiben wir das Aussehen der Seite.
+    -->
+    <link rel="stylesheet" href="css.ü.css">
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         HAUPTBEREICH DER SEITE
+         ========================================================= -->
+
+    <header>
+
+        <!-- Grosse Uberschrift -->
+        <h1>Meine HTML & CSS Übungsseite</h1>
+
+        <!-- Normaler Text -->
+        <p>
+            Willkommen auf meiner kleinen Übungsseite!
+        </p>
+
+        <!--
+            Dieser Text bekommt spater uber CSS eine Farbe.
+        -->
+        <p class="farbiger-text">
+            Dieser Text ist farbig.
+        </p>
+
+        <!--
+            Dieser Text bleibt absichtlich ohne besondere Farbe.
+        -->
+        <p>
+            Dieser Text verwendet die normale Textfarbe.
+        </p>
+
+    </header>
+
+
+    <!-- =========================================================
+         BEREICH MIT FARBIGEM HINTERGRUND
+         ========================================================= -->
+
+    <section class="farbiger-bereich">
+
+        <h2>Farben und Hintergründe</h2>
+
+        <p>
+            Dieser gesamte Bereich hat einen farbigen Hintergrund.
+        </p>
+
+        <p class="farbiger-text">
+            Auch dieser Text hat eine eigene Textfarbe.
+        </p>
+
+    </section>
+
+
+    <!-- =========================================================
+         LINKS
+         ========================================================= -->
+
+    <section>
+
+        <h2>Links</h2>
+
+        <p>
+            Das hier ist ein normaler Text-Link:
+            
+            <!--
+                "href" bestimmt, wohin der Link fuhrt.
+                target="_blank" offnet den Link in einem neuen Tab.
+            -->
+            <a href="https://github.com" target="_blank">
+                GitHub öffnen
+            </a>
+        </p>
+
+
+        <p>
+            Hier befindet sich ein
+            <a href="https://github.com" target="_blank">
+                Link mitten im Text
+            </a>
+            und der restliche Text geht danach weiter.
+        </p>
+
+
+        <!--
+            Dieser Link sieht spater uber CSS wie ein Button aus.
+            Es ist trotzdem ein normaler HTML-Link.
+        -->
+        <a class="link-button"
+           href="https://github.com"
+           target="_blank">
+            GitHub als Button
+        </a>
+
+    </section>
+
+
+    <!-- =========================================================
+         BUTTONS
+         ========================================================= -->
+
+    <section>
+
+        <h2>Drei verschiedene Buttons</h2>
+
+        <!--
+            Button 1:
+            Dieser Button bekommt einen einfachen Hover-Effekt.
+        -->
+        <button class="button-1">
+            Button 1
+        </button>
+
+
+        <!--
+            Button 2:
+            Dieser Button bekommt spater einen Leuchteffekt.
+        -->
+        <button class="button-2">
+            Button 2
+        </button>
+
+
+        <!--
+            Button 3:
+            Dieser Button bekommt spater eine Bewegung.
+        -->
+        <button class="button-3">
+            Button 3
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+         ANIMIERTER BEREICH
+         ========================================================= -->
+
+    <section>
+
+        <h2>Hover-Effekt</h2>
+
+        <!--
+            Wenn man mit der Maus uber diesen Bereich fahrt,
+            verandert er sich.
+
+            Das wird spater ausschliesslich mit CSS.
+        -->
+        <div class="hover-box">
+
+            <h2>HOVER ÜBER MICH</h2>
+
+            <p>
+                Bewege deine Maus über diesen Bereich.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DATEI AUSWAHLEN / IMPORTIEREN
+         ========================================================= -->
+
+    <section class="upload-bereich">
+
+        <h2>Datei importieren</h2>
+
+        <p>
+            Hier kannst du testweise eine Datei auswählen.
+        </p>
+
+        <!--
+            "input type=file" offnet beim Anklicken
+            das normale Datei-Auswahlfenster von Windows.
+
+            Wichtig:
+            Diese Ubung ladt die Datei NICHT irgendwo hoch.
+
+            Es wird nur das Datei-Auswahlfenster geoffnet.
+        -->
+            <!-- datei auswahl-->
+        <input type="file">
+
+    </section>
+
+
+    <!-- =========================================================
+         ENDE DER SEITE
+         ========================================================= -->
+
+    <footer>
+
+        <p>
+            Meine HTML & CSS Übung
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
