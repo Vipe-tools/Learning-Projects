@@ -1,0 +1,5 @@
+# Build WinFetch executable
+py -m PyInstaller --onefile --name WinFetch WinFetch.py
+
+# Start WinFetch automatically with PowerShell
+Add-Content $PROFILE '& "C:\Path\To\WinFetch.exe"'
