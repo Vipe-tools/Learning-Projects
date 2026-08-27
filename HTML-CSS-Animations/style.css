@@ -1,0 +1,484 @@
+/* =========================================================
+   GRUNDLEGENDES
+   ========================================================= */
+
+/* Alle Elemente bekommen diese Grundeinstellungen */
+* {
+    box-sizing: border-box;
+}
+
+/* Einstellungen für die komplette Webseite */
+body {
+    margin: 0;
+    background: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Überschrift */
+h1 {
+    margin: 30px;
+}
+
+
+/* =========================================================
+   SPIELFELD
+   ========================================================= */
+
+/*
+   Das Spielfeld ist der Bereich,
+   in dem sich unsere Formen bewegen.
+*/
+.spielfeld {
+    position: relative;
+
+    width: 900px;
+    height: 500px;
+
+    margin: auto;
+
+    background: #eeeeee;
+
+    /*
+       Alles außerhalb des Spielfeldes
+       wird abgeschnitten.
+    */
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.text {
+    position: absolute;
+
+    top: 220px;
+    left: 200px;
+
+    font-size: 30px;
+
+    color: black;
+
+    /*
+       Damit die Formen über dem Text liegen,
+       bekommen die Formen später einen höheren z-index.
+    */
+    z-index: 1;
+}
+
+
+/* =========================================================
+   GRUNDFORM FÜR ALLE FORMEN
+   ========================================================= */
+
+.form {
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    /*
+       Höher als der Text,
+       dadurch können die Formen den Text überdecken.
+    */
+    z-index: 2;
+    /* wenn nichts dann ist es immer 1 */
+}
+
+
+/* =========================================================
+   ROTES QUADRAT
+   ========================================================= */
+
+.rot {
+    background: red;
+
+    top: 50px;
+    left: 50px;
+}
+
+
+/* =========================================================
+   BLAUER KREIS
+   ========================================================= */
+
+.blau {
+    background: blue;
+
+    top: 50px;
+    left: 200px;
+
+    /*
+       Macht aus dem Quadrat einen Kreis.
+    */
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   GRÜNES QUADRAT
+   ========================================================= */
+
+.gruen {
+    background: green;
+
+    top: 50px;
+    left: 350px;
+
+    /*
+       20px abgerundete Ecken
+    */
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   GELBER KREIS
+   ========================================================= */
+
+.gelb {
+    background: yellow;
+
+    top: 50px;
+    left: 500px;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   LILA RECHTECK
+   ========================================================= */
+
+.lila {
+    background: purple;
+
+    width: 140px;
+    height: 60px;
+
+    top: 100px;
+    left: 700px;
+}
+
+
+/* =========================================================
+   BEWEGUNG
+   ========================================================= */
+
+/*
+   @keyframes beschreibt eine Animation.
+
+   Die Form bewegt sich von links nach rechts
+   und anschließend wieder zurück.
+*/
+
+@keyframes linksRechts {
+
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 820px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+/* Form mit der Animation */
+.farbwechsel {
+    background: orange;
+
+    top: 200px;
+
+    animation: linksRechts 4s infinite;
+}
+
+
+/* =========================================================
+   FARBWECHSEL
+   ========================================================= */
+
+/*
+   Die Form verändert während der Animation
+   ihre Farbe.
+*/
+
+@keyframes farben {
+
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    50% {
+        background: blue;
+    }
+
+    75% {
+        background: green;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+
+/* Farbe + Bewegung gleichzeitig */
+.farbwechsel {
+    animation:
+        linksRechts 4s infinite,
+        farben 4s infinite;
+}
+
+
+/* =========================================================
+   DREHEN
+   ========================================================= */
+
+/*
+   rotate() dreht ein Element.
+*/
+
+@keyframes drehen {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Die Form dreht sich unendlich */
+.drehend {
+    background: cyan;
+
+    top: 300px;
+    left: 100px;
+
+    animation: drehen 2s linear infinite;
+}
+
+
+/* =========================================================
+   DREHEN + BEWEGEN
+   ========================================================= */
+
+.drehend {
+    /*
+       Hier könnten mehrere Animationen
+       gleichzeitig laufen.
+    */
+}
+
+
+/* =========================================================
+   PULSIEREN
+   ========================================================= */
+
+/*
+   Die Form wird größer und wieder kleiner.
+*/
+
+@keyframes pulsieren {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.pulsierend {
+    background: pink;
+
+    top: 350px;
+    left: 400px;
+
+    animation: pulsieren 2s infinite;
+}
+
+
+/* =========================================================
+   DIAGONALE BEWEGUNG
+   ========================================================= */
+
+/*
+   Die Form bewegt sich:
+   
+   oben links
+        ↓
+   unten rechts
+        ↓
+   oben links
+*/
+
+@keyframes diagonalBewegung {
+
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    50% {
+        left: 820px;
+        top: 420px;
+    }
+
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+
+.diagonal {
+    background: orange;
+
+    animation: diagonalBewegung 5s linear infinite;
+}
+
+
+/* =========================================================
+   TRANSPARENZ
+   ========================================================= */
+
+.diagonal {
+    /*
+       0 = komplett unsichtbar
+       1 = komplett sichtbar
+
+       0.7 = 70% sichtbar
+    */
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   KREISBAHN
+   ========================================================= */
+
+/*
+   Hier benutzen wir transform.
+
+   Die Form dreht sich um einen Punkt
+   und bewegt sich dadurch auf einer Kreisbahn.
+*/
+
+@keyframes kreisBewegung {
+
+    0% {
+        transform: rotate(0deg) translateX(150px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(150px);
+    }
+}
+
+
+.kreisbahn {
+    background: lime;
+
+    /*
+       Ausgangspunkt
+    */
+    top: 200px;
+    left: 400px;
+
+    border-radius: 50%;
+
+    animation: kreisBewegung 4s linear infinite;
+}
+
+
+/* =========================================================
+   HOVER-EFFEKT
+   ========================================================= */
+
+/*
+   Wenn die Maus über eine Form geht,
+   wird sie größer.
+*/
+
+.form:hover {
+    transform: scale(1.3);
+
+    /*
+       Mauszeiger wird zur Hand.
+    */
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   ZUSÄTZLICHE BEWEGUNG
+   ========================================================= */
+
+/*
+   Auf und ab bewegen.
+*/
+
+@keyframes hochRunter {
+
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 420px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+
+/*
+   Beispiel für eine Form,
+   die sich vertikal bewegt.
+*/
+
+.gruen {
+    animation: hochRunter 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   GESCHWINDIGKEITEN
+   ========================================================= */
+
+/*
+   Beispiele:
+
+   1s  = sehr schnell
+   3s  = mittel
+   10s = langsam
+
+   "infinite" = unendlich wiederholen
+
+   "linear" = gleichmäßige Geschwindigkeit
+
+   "ease-in-out" = langsam starten und stoppen
+*/
